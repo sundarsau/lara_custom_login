@@ -25,8 +25,7 @@ class AuthController extends Controller
      *
      * @return response()
      */
-    public function index()
-    {
+    public function index(){
         $title = "Login";
         return view('auth.login', compact('title'));
     }
