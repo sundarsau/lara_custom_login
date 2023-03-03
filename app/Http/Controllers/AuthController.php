@@ -101,7 +101,7 @@ class AuthController extends Controller
                 'name'           => 'required|max:255',
                 'email'          => 'required|email|unique:users|max:255',
                 'password'       => 'required|min:6',
-                'confirm_password'  => 'required|same:password| required_with:password_confirmation',
+                'confirm_password'  => 'required|same:password',
             ]
         );
 
@@ -185,7 +185,7 @@ class AuthController extends Controller
         $request->validate([
             'current_password'  => 'required',
             'new_password'      => 'required|min:6',
-            'conf_new_password' => 'required|required_with:password_confirmation|same:new_password|min:6',
+            'confirm_password' => 'required|same:new_password|min:6',
         ]);
 
         if (!(Hash::check($request->current_password, Auth::user()->password))) {
