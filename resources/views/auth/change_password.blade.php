@@ -18,7 +18,7 @@
                                 {{ session('success') }}
                             </div>
                         @endif
-                     
+
                         <form class="form-horizontal" method="POST" action="{{ route('password.change.post') }}">
                             {{ csrf_field() }}
                             <div class="form-group mt-3">

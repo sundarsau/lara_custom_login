@@ -63,6 +63,8 @@ class AuthController extends Controller
                 $token = Str::random(64);
                 UserToken::UpdateOrCreate([
                     'user_id' => $user->id,
+                ],
+                [
                     'token' => $token,
                 ]);
 

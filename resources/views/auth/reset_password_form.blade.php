@@ -3,7 +3,9 @@
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card">
-                <div class="card-header"><h4>Reset Password</h4></div>
+                <div class="card-header">
+                    <h4>Reset Password</h4>
+                </div>
                 <div class="card-body">
 
                     @if (session()->has('error'))
@@ -17,7 +19,8 @@
 
                         <div class="form-group mb-4">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" name="email" autofocus value="{{ old('email') }}" placeholder="Enter your Email">
+                            <input type="text" class="form-control" name="email" autofocus value="{{ old('email') }}"
+                                placeholder="Enter your Email">
                             <div class="error">
                                 @error('email')
                                     {{ $message }}
@@ -27,22 +30,24 @@
 
                         <div class="form-group mb-4">
                             <label for="password">Password</label>
-                                <input type="password" class="form-control" name="new_password" placeholder="Enter New Password">
-                                <div class="error">
-                                    @error('new_password')
-                                        {{ $message }}
-                                    @enderror
-                                </div>
+                            <input type="password" class="form-control" name="new_password"
+                                placeholder="Enter New Password">
+                            <div class="error">
+                                @error('new_password')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                         <div class="form-group mb-4">
                             <label for="password-confirm">Confirm
                                 Password</label>
-                                <input type="password" class="form-control" name="conf_new_password" placeholder="Re enter Password">
-                                <div class="error">
-                                    @error('conf_new_password')
-                                        {{ $message }}
-                                    @enderror
-                                </div>
+                            <input type="password" class="form-control" name="conf_new_password"
+                                placeholder="Re enter Password">
+                            <div class="error">
+                                @error('conf_new_password')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="col-md-6 offset-md-4">
