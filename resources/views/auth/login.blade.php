@@ -1,5 +1,5 @@
-@extends('layouts.master')
-@section('main-content')
+@extends("layouts.master")
+@section("main-content")
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card">
@@ -14,9 +14,9 @@
                             </ul>
                         </div>
                     @endif
-                    @if (session()->has('message'))
+                    @if (session()->has("message"))
                         <div class="alert alert-success">
-                            {{ session()->get('message') }}
+                            {{ session()->get("message") }}
                         </div>
                     @endif
                     <form class="formLogin" action="{{ route('login.post') }}" method="post">

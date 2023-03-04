@@ -1,5 +1,5 @@
-@extends('layouts.master')
-@section('main-content')
+@extends("layouts.master")
+@section("main-content")
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card">
@@ -8,9 +8,9 @@
                 </div>
                 <div class="card-body">
 
-                    @if (session()->has('error'))
+                    @if (session()->has("error"))
                         <div class="alert alert-danger">
-                            {{ session()->get('error') }}
+                            {{ session()->get("error") }}
                         </div>
                     @endif
                     <form action="{{ route('reset.password.post') }}" method="POST">
@@ -22,7 +22,7 @@
                             <input type="text" class="form-control" name="email" autofocus value="{{ old('email') }}"
                                 placeholder="Enter your Email">
                             <div class="error">
-                                @error('email')
+                                @error("email")
                                     {{ $message }}
                                 @enderror
                             </div>
@@ -33,7 +33,7 @@
                             <input type="password" class="form-control" name="new_password"
                                 placeholder="Enter New Password">
                             <div class="error">
-                                @error('new_password')
+                                @error("new_password")
                                     {{ $message }}
                                 @enderror
                             </div>
@@ -44,7 +44,7 @@
                             <input type="password" class="form-control" name="confirm_password"
                                 placeholder="Re enter Password">
                             <div class="error">
-                                @error('confirm_password')
+                                @error("confirm_password")
                                     {{ $message }}
                                 @enderror
                             </div>

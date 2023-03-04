@@ -1,5 +1,5 @@
-@extends('layouts.master')
-@section('main-content')
+@extends("layouts.master")
+@section("main-content")
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card">
@@ -7,14 +7,14 @@
                     <h4>Change Password</h4>
                 </div>
                 <div class="card-body">
-                    @if (session('error'))
+                    @if (session("error"))
                         <div class="alert alert-danger">
-                            {{ session('error') }}
+                            {{ session("error") }}
                         </div>
                     @endif
-                    @if (session('success'))
+                    @if (session("success"))
                         <div class="alert alert-success">
-                            {{ session('success') }}
+                            {{ session("success") }}
                         </div>
                     @endif
 
@@ -25,7 +25,7 @@
                             <input id="current_password" type="password" class="form-control" name="current_password">
 
                             <div class="error">
-                                @error('current_password')
+                                @error("current_password")
                                     {{ $message }}
                                 @enderror
                             </div>
@@ -35,7 +35,7 @@
                             <label for="new-password">New Password</label>
                             <input id="new_password" type="password" class="form-control" name="new_password">
                             <div class="error">
-                                @error('new_password')
+                                @error("new_password")
                                     {{ $message }}
                                 @enderror
                             </div>
@@ -46,7 +46,7 @@
                                 Password</label>
                             <input id="new-password-confirm" type="password" class="form-control" name="confirm_password">
                             <div class="error">
-                                @error('confirm_password')
+                                @error("confirm_password")
                                     {{ $message }}
                                 @enderror
                             </div>

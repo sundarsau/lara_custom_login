@@ -47,9 +47,6 @@ ul {
     margin: 0;
 }
 
-
-
-
 .navbar_inner nav ul li a {
     color: var(--dark);
     font-weight: 500;
@@ -107,5 +104,4 @@ ul {
         border-radius: 7px;
     }
 }
-
 
