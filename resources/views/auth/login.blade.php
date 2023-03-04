@@ -21,7 +21,6 @@
                     @endif
                     <form class="formLogin" action="{{ route('login.post') }}" method="post">
                         @csrf
-
                         <div class="form-group mb-4">
                             <label for="email">Email</label>
                             <input type="text" name="email" class="form-control" placeholder="Enter your Email"
