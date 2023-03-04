@@ -42,7 +42,7 @@ Route::post('reset-password', [AuthController::class, 'resetPasswordPost'])->nam
 Route::middleware('auth:web')->group(function(){
     
         Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-        Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+        Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
         Route::get('change-password', [AuthController::class, 'changePasswordForm'])->name('password.change.form');
         Route::post('change-password', [AuthController::class, 'changePasswordPost'])->name('password.change.post');
         

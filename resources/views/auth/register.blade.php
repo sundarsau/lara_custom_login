@@ -17,7 +17,7 @@
                             {{ session('error') }}
                         </div>
                     @endif
-                    <form class="formRegister" action="{{ route('register.post') }}" method="post">
+                    <form id = "thisForm" class="formRegister" action="{{ route('register.post') }}" method="post">
                         @csrf
                         <div class="form-group mb-3">
                             <label for="name">Name</label>
@@ -65,6 +65,7 @@
                         <div class="form-group d-flex justify-content-end">
                             <button type="submit" class="submit-btn">Create My Account</button>
                         </div>
+                        <div id ="loader"></div>
                         <div class="mt-5">
                             <p>Already have an account? <a href="{{ route('login') }}" class="create_now">Login</a></p>
                         </div>
@@ -74,3 +75,11 @@
         </div>
     </div>
 @endsection
+@push('js')
+<script>
+    $("#thisForm").submit(function() {
+        $(".submit-btn").attr("disabled", true);
+        $("#loader").show();
+    });
+</script>
+@endpush

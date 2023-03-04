@@ -47,7 +47,7 @@
 
 @push('js')
 <script>
-    $("#thisForm").submit(function(e) {
+    $("#thisForm").submit(function() {
         $(".submit-btn").attr("disabled", true);
         $("#loader").show();
     });

@@ -132,19 +132,7 @@ class AuthController extends Controller
         }
     }
 
-    public function dashboard()
-    {
-        $title = "Dashboard";
-        return view('dashboard', compact('title'));
-    }
-
-    public function logout()
-    {
-        Session::flush();
-        Auth::logout();
-
-        return redirect('login');
-    }
+   
     /**
      * Write code on Method
      *
@@ -246,7 +234,7 @@ class AuthController extends Controller
         $request->validate([
             'email' => 'required|email|exists:users',
             'new_password'      => 'required|min:6',
-            'conf_new_password' => 'required|same:new_password|min:6',
+            'confirm_password' => 'required|same:new_password|min:6',
         ]);
 
         $verifyToken = DB::table('password_resets')
@@ -266,5 +254,13 @@ class AuthController extends Controller
         DB::table('password_resets')->where(['email' => $request->email])->delete();
 
         return redirect('login')->with('message', 'Your password is Reset. Please login with new password!');
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+
+        return redirect('login');
     }
 }

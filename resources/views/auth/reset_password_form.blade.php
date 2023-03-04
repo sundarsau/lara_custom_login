@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="form-group mb-4">
-                            <label for="password">Password</label>
+                            <label for="password">New Password</label>
                             <input type="password" class="form-control" name="new_password"
                                 placeholder="Enter New Password">
                             <div class="error">
@@ -41,10 +41,10 @@
                         <div class="form-group mb-4">
                             <label for="password-confirm">Confirm
                                 Password</label>
-                            <input type="password" class="form-control" name="conf_new_password"
+                            <input type="password" class="form-control" name="confirm_password"
                                 placeholder="Re enter Password">
                             <div class="error">
-                                @error('conf_new_password')
+                                @error('confirm_password')
                                     {{ $message }}
                                 @enderror
                             </div>

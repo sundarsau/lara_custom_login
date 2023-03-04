@@ -10,6 +10,10 @@ class UserToken extends Model
     use HasFactory;
     protected $fillable = ['user_id', 'token'];
 
+    protected $hidden = [
+        'token',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
