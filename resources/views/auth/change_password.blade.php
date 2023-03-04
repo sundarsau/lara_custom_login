@@ -49,7 +49,6 @@
                                 </div>
                             </div>
 
-
                             <div class="form-group mt-3">
                                 <label for="new-password-confirm" class="col-md-4 control-label">Confirm New
                                     Password</label>

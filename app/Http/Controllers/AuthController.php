@@ -222,8 +222,10 @@ class AuthController extends Controller
 
         PasswordReset::updateOrCreate([
             'email' => $request->email,
-            'token' => $token
-        ]);
+            ],
+            [
+            'token' => $token,
+            ]);
 
         Mail::send('emails.forget_password', ['token' => $token], function ($message) use ($request) {
             $message->to($request->email);
@@ -258,11 +260,11 @@ class AuthController extends Controller
             return back()->withInput()->with('error', 'Invalid Token!');
         }
 
-        $user = User::where('email', $request->email)
+        User::where('email', $request->email)
             ->update(['password' => Hash::make($request->new_password)]);
 
         DB::table('password_resets')->where(['email' => $request->email])->delete();
 
-        return redirect('login')->with('message', 'Your password is Reset!');
+        return redirect('login')->with('message', 'Your password is Reset. Please login with new password!');
     }
 }

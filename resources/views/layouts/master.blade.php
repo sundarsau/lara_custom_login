@@ -35,6 +35,7 @@
             @yield('main-content')
         </div>
     @include('layouts.footer')
+    @stack('js')
 </body>
 
 </html>
