@@ -9,4 +9,4 @@
       @endif</h3>
     <a href="{{route("home")}}">Go to Home</a>
 </div>
-@endsection()
+@endsection
