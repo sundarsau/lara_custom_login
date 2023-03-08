@@ -12,4 +12,4 @@
         </div>
         @endif</p>
 </div>
-@endsection()
+@endsection
