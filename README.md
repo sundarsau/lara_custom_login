@@ -1,7 +1,5 @@
  # Custom Login, registration, forgot password and change password in Laravel
- custom login, registration, change password and forgot password
-
-This is a small Laravel application to show how you can submit a form using Ajax. It uses Laravel 9 and MySQL. Laravel form validation is used and once form is submitted successfully, it displays a message in a modal.
+This Laravel application is developed for custom authentication in Laravel without using any Package. It provides Registration, Login, Change Password and Forgot Password. It also does email verification during Registration using MailTrap. Tutorial - https://codehow2.com/laravel/how-to-develop-custom-register-and-login-with-change-password-in-laravel
 
 # How To Use
 
